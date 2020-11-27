@@ -1,6 +1,3 @@
-import { builtinModules } from 'module';
-import Products from '../pages/products';
-
 interface Product {
   name: string;
   description: string;
