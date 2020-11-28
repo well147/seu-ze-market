@@ -1,10 +1,10 @@
-interface Product {
+export type Product = {
   name: string;
   description: string;
   punchline?: string;
   price: number;
   image: string;
-}
+};
 
 const products: Product[] = [
   {
