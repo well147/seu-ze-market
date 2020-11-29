@@ -8,7 +8,12 @@ export const dark: DefaultTheme = {
     secundary: '#8CAAF8',
 
     background: '#33312E',
-    text: '#D1D2F9'
+    text: '#D1D2F9',
+
+    alt: {
+      background: 'white',
+      text: '#33312E'
+    }
   }
 };
 
@@ -20,6 +25,11 @@ export const light: DefaultTheme = {
     secundary: '#3E72F4',
 
     background: '#D1D2F9',
-    text: '#33312E'
+    text: '#33312E',
+
+    alt: {
+      background: '#33312E',
+      text: 'white'
+    }
   }
 };
