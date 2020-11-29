@@ -1,4 +1,5 @@
 export type Product = {
+  id: number;
   name: string;
   description: string;
   punchline?: string;
@@ -8,6 +9,7 @@ export type Product = {
 
 const products: Product[] = [
   {
+    id: 1,
     name: 'Maçã',
     description: 'Maçã organica comprada no Pomar da Serra em belo horizonte.',
     punchline:
@@ -16,6 +18,7 @@ const products: Product[] = [
     image: 'apple.png'
   },
   {
+    id: 2,
     name: 'Beterraba',
     description: 'Beterraba organica comprada no CEASA.',
     punchline: '🤢',
@@ -23,6 +26,7 @@ const products: Product[] = [
     image: 'beetroot.png'
   },
   {
+    id: 3,
     name: 'Pão',
     description: 'Pão Frãnces assado no forno.',
     punchline: 'Solo pane francese.',
@@ -30,6 +34,7 @@ const products: Product[] = [
     image: 'bread.png'
   },
   {
+    id: 4,
     name: 'Cenoura',
     description: 'Cenoura comprada no Ceasa.',
     punchline: 'Isso é uma piada, ria, ria imediatamente.',
@@ -37,6 +42,7 @@ const products: Product[] = [
     image: 'carrot.png'
   },
   {
+    id: 5,
     name: 'Sementes de Cacau',
     description: 'Sementes de cacau frescas.',
     punchline: 'Obtidas de forma 100% legal.',
@@ -44,6 +50,7 @@ const products: Product[] = [
     image: 'cocoa-beans.png'
   },
   {
+    id: 6,
     name: 'Frango Assado',
     description: 'Frango assado na maquininha na frente da minha loja.',
     punchline: 'Você realmente ta interessado em onde eu preparo o frango?',
@@ -51,6 +58,7 @@ const products: Product[] = [
     image: 'cooked-chicken.png'
   },
   {
+    id: 7,
     name: 'Cordeiro Assado',
     description: 'Cordeiro assado.',
     punchline: 'O fato de ter vindo de uma ovelha é apenas um detalhe.',
@@ -58,6 +66,7 @@ const products: Product[] = [
     image: 'cooked-mutton.png'
   },
   {
+    id: 8,
     name: 'Bifão Frito',
     description: 'Bife de boi feito na chapa.',
     punchline: '"Garçom: Bife de boi..."',
@@ -65,6 +74,7 @@ const products: Product[] = [
     image: 'steak.png'
   },
   {
+    id: 9,
     name: 'Bifão Frito 2',
     description: 'Bife de porco feito na chapa.',
     punchline: '"Garçom: ...ou de porco?"',
@@ -72,6 +82,7 @@ const products: Product[] = [
     image: 'cooked-porkchop.png'
   },
   {
+    id: 10,
     name: 'Coelho Cozido',
     description: 'Carne de coelho cozida.',
     punchline:
@@ -80,6 +91,7 @@ const products: Product[] = [
     image: 'cooked-rabbit.png'
   },
   {
+    id: 11,
     name: 'Alga seca',
     description: 'Alga seca.',
     punchline: 'É uma alga... que tá seca.',
@@ -87,6 +99,7 @@ const products: Product[] = [
     image: 'dried-kelp.png'
   },
   {
+    id: 12,
     name: 'Melancia',
     description: '94% água.',
     punchline: 'grep "Piada Melancia:" ../../piadas/piadas.txt',
@@ -94,6 +107,7 @@ const products: Product[] = [
     image: 'melon-slice.png'
   },
   {
+    id: 13,
     name: 'Bacalhau',
     description:
       'Cod is the common name for the demersal fish genus Gadus, belonging to the family Gadidae.[1] Cod is also used as part of the common name for a number of other fish species, and one species that belongs to genus Gadus is commonly not called cod',
@@ -101,6 +115,7 @@ const products: Product[] = [
     image: 'raw-cod.png'
   },
   {
+    id: 14,
     name: 'Sementes de Cacau',
     description: 'Sementes de cacau frescas.',
     punchline: 'Obtidas de forma 100% legal.',
@@ -108,6 +123,7 @@ const products: Product[] = [
     image: 'cocoa-beans.png'
   },
   {
+    id: 15,
     name: 'Cordeiro Assado',
     description: 'Cordeiro assado.',
     punchline: 'O fato de ter vindo de uma ovelha é apenas um detalhe.',
@@ -115,6 +131,7 @@ const products: Product[] = [
     image: 'cooked-mutton.png'
   },
   {
+    id: 16,
     name: 'Alga seca',
     description: 'Alga seca.',
     punchline: 'É uma alga... que tá seca.',
@@ -122,6 +139,7 @@ const products: Product[] = [
     image: 'dried-kelp.png'
   },
   {
+    id: 17,
     name: 'Coelho Cozido',
     description: 'Carne de coelho cozida.',
     punchline:
@@ -130,6 +148,7 @@ const products: Product[] = [
     image: 'cooked-rabbit.png'
   },
   {
+    id: 18,
     name: 'Melancia',
     description: '94% água.',
     punchline: 'grep "Piada Melancia:" ../../piadas/piadas.txt',
@@ -137,6 +156,7 @@ const products: Product[] = [
     image: 'melon-slice.png'
   },
   {
+    id: 19,
     name: 'Bifão Frito',
     description: 'Bife de boi feito na chapa.',
     punchline: '"Garçom: Bife de boi..."',
@@ -144,6 +164,7 @@ const products: Product[] = [
     image: 'steak.png'
   },
   {
+    id: 20,
     name: 'Bifão Frito 2',
     description: 'Bife de porco feito na chapa.',
     punchline: '"Garçom: ...ou de porco?"',
