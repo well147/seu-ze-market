@@ -1,18 +1,27 @@
+import { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
 import {
   Header,
   Logo,
   LogoContainer,
-  Switch
+  Slider,
+  Switch,
+  SwitchContainer
 } from '../styles/components/navbar.style';
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC<{ toggleTheme(): void }> = ({ toggleTheme }) => {
+  const { title } = useContext(ThemeContext);
+
   return (
     <Header>
-      <LogoContainer>
+      <LogoContainer href="#">
         <Logo src="products/carrot.png" alt="logo" />
         Venda do Seu Zé
       </LogoContainer>
-      <Switch />
+      <SwitchContainer onClick={toggleTheme}>
+        <Slider active={title === 'light'} />
+        <Switch />
+      </SwitchContainer>
     </Header>
   );
 };

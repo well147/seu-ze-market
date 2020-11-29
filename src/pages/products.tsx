@@ -1,11 +1,14 @@
 import { Container } from '../styles/pages/products.style';
-
 import Navbar from '../components/navbar';
 
-const Products: React.FC = () => {
+type Props = {
+  toggleTheme(): void;
+};
+
+const Products: React.FC<Props> = ({ toggleTheme }) => {
   return (
     <>
-      <Navbar />
+      <Navbar toggleTheme={toggleTheme} />
       <Container />
     </>
   );
