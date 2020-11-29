@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Form from '../components/form';
 
 const Home: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const Home: React.FC = () => {
       </Head>
 
       <main>
-        <h1>Hello World</h1>
+        <Form />
       </main>
     </div>
   );
