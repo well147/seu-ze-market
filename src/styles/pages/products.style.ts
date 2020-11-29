@@ -7,3 +7,11 @@ export const Container = styled.section`
   grid-template-rows: repeat(auto-fill, 1fr);
   grid-gap: 20px;
 `;
+
+export const DetailContainer = styled.div`
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
