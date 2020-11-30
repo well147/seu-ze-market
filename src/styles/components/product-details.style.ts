@@ -7,20 +7,20 @@ export const Image = styled.img`
   background-color: #d1d2f9;
 `;
 
-export const ItenName = styled.h4`
+export const ItemName = styled.h4`
   font-weight: 550;
   font-size: 1.4rem;
   color: #d1d2f9;
   margin: 5%;
 `;
 
-export const ItenPrice = styled.h4`
+export const ItemPrice = styled.h4`
   font-weight: 550;
   font-size: 1.2rem;
   color: #d1d2f9;
 `;
 
-export const ItenDescripition = styled.h4`
+export const ItemDescripition = styled.h4`
   font-weight: 500;
   font-size: 1rem;
   color: #d1d2f9;
