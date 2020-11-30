@@ -62,6 +62,6 @@ export const TextContainer = styled.div`
 `;
 
 export const Image = styled.img`
-  height: 250px;
-  width: 250px;
+  height: 150px;
+  width: 150px;
 `;
