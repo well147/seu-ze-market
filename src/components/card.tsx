@@ -1,29 +1,36 @@
-import { ChangeEvent, useState } from 'react';
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 import {
   Button,
   ProductName,
   ProductPrice,
   Container,
   Image,
-  TextContainer
+  TextContainer,
+  A
 } from '../styles/components/card.style';
 
 type Props = {
+  id: number;
   image: string;
   price: number;
   name: string;
 };
 
-const Card: React.FC<Props> = ({ image, price, name }) => {
+const Card: React.FC<Props> = ({ id, image, price, name }) => {
   return (
     <Container>
       <Image src={`/products/${image}`} />
       <TextContainer>
         <ProductName>{name}</ProductName>
-        <ProductPrice>{price}</ProductPrice>
+        <ProductPrice>
+          R${price.toFixed(2).toString().replace('.', ',')}
+        </ProductPrice>
       </TextContainer>
-      <Button>Detalhes</Button>
+      <Button>
+        <Link href={`/product/${encodeURIComponent(id)}`} passHref>
+          <A>Detalhes</A>
+        </Link>
+      </Button>
     </Container>
   );
 };

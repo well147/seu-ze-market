@@ -8,7 +8,7 @@ export const dark: DefaultTheme = {
     secundary: '#8CAAF8',
 
     background: '#33312E',
-    text: '#D1D2F9',
+    text: '#EDEDFD',
 
     alt: {
       background: 'white',
@@ -24,7 +24,7 @@ export const light: DefaultTheme = {
     primary: '#3E63A3',
     secundary: '#3E72F4',
 
-    background: '#D1D2F9',
+    background: '#EDEDFD',
     text: '#33312E',
 
     alt: {
