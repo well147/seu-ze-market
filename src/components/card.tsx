@@ -27,7 +27,7 @@ const Card: React.FC<Props> = ({ id, image, price, name }) => {
         </ProductPrice>
       </TextContainer>
       <Button>
-        <Link href={`/product/${encodeURIComponent(id)}`} passHref>
+        <Link href={`/products/${encodeURIComponent(id)}`} passHref>
           <A>Detalhes</A>
         </Link>
       </Button>

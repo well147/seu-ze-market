@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import {
@@ -14,10 +15,12 @@ const Navbar: React.FC<{ toggleTheme(): void }> = ({ toggleTheme }) => {
 
   return (
     <Header>
-      <LogoContainer href="#">
-        <Logo src="products/carrot.png" alt="logo" />
-        Venda do Seu Zé
-      </LogoContainer>
+      <Link href="/products" passHref>
+        <LogoContainer>
+          <Logo src="products/carrot.png" alt="logo" />
+          Venda do Seu Zé
+        </LogoContainer>
+      </Link>
       <SwitchContainer onClick={toggleTheme}>
         <Slider active={title === 'light'} />
         <Switch />

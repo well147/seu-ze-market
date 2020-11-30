@@ -1,7 +1,7 @@
-import { Container, ProductsPage } from '../styles/pages/products.style';
-import Navbar from '../components/navbar';
-import Card from '../components/card';
-import products from '../fixtures/products';
+import { Container, ProductsPage } from '../../styles/pages/products.style';
+import Navbar from '../../components/navbar';
+import Card from '../../components/card';
+import products from '../../fixtures/products';
 import Head from 'next/head';
 
 type Props = {

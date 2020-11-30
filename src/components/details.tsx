@@ -5,7 +5,7 @@ import {
   ItenDescripition,
   Image,
   DetailContainer
-} from '../styles/components/details.style';
+} from '../styles/components/product-details.style';
 
 const Detail: React.FC = () => {
   return (
