@@ -10,11 +10,6 @@ declare module 'styled-components' {
 
       background: string;
       text: string;
-
-      alt: {
-        background: string;
-        text: string;
-      };
     };
   }
 }

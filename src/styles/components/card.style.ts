@@ -15,7 +15,7 @@ export const Container = styled.div`
 export const ProductName = styled.h1`
   width: 100%;
 
-  color: ${props => props.theme.colors.alt.text};
+  color: ${props => props.theme.colors.background};
 
   text-align: center;
   font-size: 1.5rem;
@@ -42,9 +42,12 @@ export const Button = styled.button`
   border-radius: 10px 10px 0px 0px;
 
   background: ${props => props.theme.colors.background};
+  color: ${props => props.theme.colors.text};
 
   font-size: 1.2rem;
   font-weight: 500;
+
+  cursor: pointer;
 `;
 
 export const A = styled.a`
@@ -64,4 +67,6 @@ export const TextContainer = styled.div`
 export const Image = styled.img`
   height: 150px;
   width: 150px;
+
+  cursor: pointer;
 `;

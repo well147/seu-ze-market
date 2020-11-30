@@ -1,7 +1,6 @@
 import { FormEvent, useState } from 'react';
 import { useRouter } from 'next/router';
 import {
-  Button,
   ButtonsContainer,
   Form,
   Input,
@@ -9,6 +8,8 @@ import {
   Label,
   LoginFormPage
 } from '../styles/components/form.style';
+
+import { Button } from '../styles/global.style';
 
 const LoginForm: React.FC = () => {
   const [username, setUsername] = useState('');

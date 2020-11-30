@@ -1,21 +1,33 @@
+import Link from 'next/link';
 import {
-  Button,
-  ItemName,
-  ItemPrice,
-  ItemDescripition,
+  H1,
+  H2,
   Image,
-  DetailContainer
-} from '../styles/components/product-details.style';
+  DetailsContainer
+} from '../styles/components/details.style';
 
-const Detail: React.FC = () => {
+import { Button } from '../styles/global.style';
+
+type Props = {
+  name: string;
+  description: string;
+  image: string;
+  price: number;
+};
+
+const Detail: React.FC<Props> = ({ name, description, image, price }) => {
   return (
-    <DetailContainer>
-      <Image src="/product-images/apple.png" />
-      <ItemName>Maçã</ItemName>
-      <ItemDescripition>Descrição</ItemDescripition>
-      <ItemPrice>R$: 2.5Kg</ItemPrice>
-      <Button>Voltar</Button>
-    </DetailContainer>
+    <DetailsContainer>
+      <Image src={`/product-images/${image}`} />
+      <H1>{name}</H1>
+      <H2>R${price.toFixed(2).toString().replace('.', ',')}</H2>
+      <H2>{description}</H2>
+      <Link href="/products" passHref>
+        <a>
+          <Button primary>Voltar</Button>
+        </a>
+      </Link>
+    </DetailsContainer>
   );
 };
 

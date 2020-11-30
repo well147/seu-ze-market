@@ -19,18 +19,20 @@ type Props = {
 const Card: React.FC<Props> = ({ id, image, price, name }) => {
   return (
     <Container>
-      <Image src={`/product-images/${image}`} />
+      <Link href={`/products/${encodeURIComponent(id)}`} passHref>
+        <Image src={`/product-images/${image}`} />
+      </Link>
       <TextContainer>
         <ProductName>{name}</ProductName>
         <ProductPrice>
           R${price.toFixed(2).toString().replace('.', ',')}
         </ProductPrice>
       </TextContainer>
-      <Button>
-        <Link href={`/products/${encodeURIComponent(id)}`} passHref>
-          <A>Detalhes</A>
-        </Link>
-      </Button>
+      <Link href={`/products/${encodeURIComponent(id)}`} passHref>
+        <A>
+          <Button>Detalhes</Button>
+        </A>
+      </Link>
     </Container>
   );
 };

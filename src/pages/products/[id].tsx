@@ -1,17 +1,15 @@
-import { DetailContainer } from '../../styles/pages/products.style';
-
-import Detail from '../../components/details';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsResult } from 'next';
-import products, { Product } from '../../fixtures/products';
-import { ParsedUrlQuery } from 'querystring';
 import Head from 'next/head';
 
-type Props = {
-  product: Product | undefined;
-};
+import { ParsedUrlQuery } from 'querystring';
 
-type StaticProps = {
-  product: Product | undefined;
+import Details from '../../components/details';
+import { ProductDetailsPage } from '../../styles/pages/product-details.style';
+
+import products, { Product } from '../../fixtures/products';
+
+type Props = {
+  product: Product;
 };
 
 interface Params extends ParsedUrlQuery {
@@ -24,9 +22,14 @@ const Overview: React.FC<Props> = ({ product }) => {
       <Head>
         <title>Venda do Zé | {product?.name}</title>
       </Head>
-      <DetailContainer>
-        <Detail />
-      </DetailContainer>
+      <ProductDetailsPage>
+        <Details
+          name={product.name}
+          description={product.description}
+          image={product.image}
+          price={product.price}
+        />
+      </ProductDetailsPage>
     </>
   );
 };
@@ -38,19 +41,19 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true
+    fallback: false
   };
 };
 
-export const getStaticProps: GetStaticProps<StaticProps, Params> = async ({
+export const getStaticProps: GetStaticProps<Props, Params> = async ({
   params
-}): Promise<GetStaticPropsResult<StaticProps>> => {
+}): Promise<GetStaticPropsResult<Props>> => {
   const { id } = params as Params;
   const product = products.find(p => p.id.toString() === id);
   ('');
   return {
     props: {
-      product: product
+      product: product as Product
     }
   };
 };
