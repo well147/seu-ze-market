@@ -17,7 +17,7 @@ const Navbar: React.FC<{ toggleTheme(): void }> = ({ toggleTheme }) => {
     <Header>
       <Link href="/products" passHref>
         <LogoContainer>
-          <Logo src="products/carrot.png" alt="logo" />
+          <Logo src="product-images/carrot.png" alt="logo" />
           Venda do Seu Zé
         </LogoContainer>
       </Link>

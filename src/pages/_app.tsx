@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 
 import GlobalStyles from '../styles/global.style';
 import { dark, light } from '../styles/themes';
+import Navbar from '../components/navbar';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const [theme, setTheme] = useState(dark);
@@ -15,7 +16,8 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Component {...pageProps} toggleTheme={toggleTheme} />
+      <Navbar toggleTheme={toggleTheme} />
+      <Component {...pageProps} />
     </ThemeProvider>
   );
 };

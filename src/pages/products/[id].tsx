@@ -5,11 +5,9 @@ import { GetStaticPaths, GetStaticProps, GetStaticPropsResult } from 'next';
 import products, { Product } from '../../fixtures/products';
 import { ParsedUrlQuery } from 'querystring';
 import Head from 'next/head';
-import Navbar from '../../components/navbar';
 
 type Props = {
   product: Product | undefined;
-  toggleTheme(): void;
 };
 
 type StaticProps = {
@@ -20,13 +18,12 @@ interface Params extends ParsedUrlQuery {
   id: string;
 }
 
-const Overview: React.FC<Props> = ({ product, toggleTheme }) => {
+const Overview: React.FC<Props> = ({ product }) => {
   return (
     <>
       <Head>
         <title>Venda do Zé | {product?.name}</title>
       </Head>
-      <Navbar toggleTheme={toggleTheme} />
       <DetailContainer>
         <Detail />
       </DetailContainer>

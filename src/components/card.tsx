@@ -19,7 +19,7 @@ type Props = {
 const Card: React.FC<Props> = ({ id, image, price, name }) => {
   return (
     <Container>
-      <Image src={`/products/${image}`} />
+      <Image src={`/product-images/${image}`} />
       <TextContainer>
         <ProductName>{name}</ProductName>
         <ProductPrice>

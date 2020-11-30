@@ -10,7 +10,7 @@ import {
 const Detail: React.FC = () => {
   return (
     <DetailContainer>
-      <Image src="/products/apple.png" />
+      <Image src="/product-images/apple.png" />
       <ItenName>Maçã</ItenName>
       <ItenDescripition>Descrição</ItenDescripition>
       <ItenPrice>R$: 2.5Kg</ItenPrice>
