@@ -1,19 +1,23 @@
 import { FormEvent, useState } from 'react';
 import { useRouter } from 'next/router';
 import {
+  Alert,
   ButtonsContainer,
+  CloseButton,
   Form,
   Input,
   InputsContainer,
   Label,
   LoginFormPage
-} from '../styles/components/form.style';
+} from '../styles/components/login-form.style';
 
 import { Button } from '../styles/global.style';
 
 const LoginForm: React.FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+
   const router = useRouter();
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -21,12 +25,23 @@ const LoginForm: React.FC = () => {
 
     if (username == 'username' && password == '123') {
       router.push('/products');
+    } else {
+      setError('Usuário ou senha inválidos');
     }
+  };
+
+  const handleClear = () => {
+    setUsername('');
+    setPassword('');
   };
 
   return (
     <LoginFormPage>
       <Form onSubmit={handleSubmit}>
+        <Alert active={error.length ? true : false}>
+          {error}
+          <CloseButton className="fas fa-times" onClick={() => setError('')} />
+        </Alert>
         <InputsContainer>
           <Label htmlFor="username">Nome de Usuário</Label>
           <Input
@@ -47,7 +62,7 @@ const LoginForm: React.FC = () => {
           <Button primary type="submit">
             Login
           </Button>
-          <Button>Limpar</Button>
+          <Button onClick={handleClear}>Limpar</Button>
         </ButtonsContainer>
       </Form>
     </LoginFormPage>

@@ -47,6 +47,10 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+          <script
+            src="https://kit.fontawesome.com/5b078985fe.js"
+            crossOrigin="anonymous"
+          ></script>
         </Head>
         <body>
           <Main />

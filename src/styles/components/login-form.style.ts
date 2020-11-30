@@ -18,6 +18,32 @@ export const Form = styled.form`
   padding: 30px;
 `;
 
+export const Alert = styled.div<{ active: boolean }>`
+  display: none;
+
+  ${props =>
+    props.active &&
+    css`
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      height: 3rem;
+      width: 100%;
+
+      padding: 10px 15px;
+
+      background: #cf5c36;
+      color: white;
+
+      font-size: 1.2rem;
+    `}
+`;
+
+export const CloseButton = styled.i`
+  cursor: pointer;
+`;
+
 export const InputsContainer = styled.div`
   display: flex;
   flex-direction: column;
